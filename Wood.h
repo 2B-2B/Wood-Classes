@@ -32,6 +32,9 @@ public:
 	//additional functions
 	double totalPrice() { return price * amount; }		//this function calculates the total price for the amount needed.
 	
+	System::String^ getDimentionSS();
+	System::String^ getPriceSS();
+	System::String^ getAmountSS();
 
 };
 
