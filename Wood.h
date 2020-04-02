@@ -1,22 +1,38 @@
 #ifndef WOOD_H
 #define WOOD_H
+
+#include <msclr/marshal_cppstd.h>
+
+/*
+This is the parent class for all wood types and finishes. 
+The Wood class uses general variables shared among all wood types including price and amount.
+*/
+
 class Wood
 {
 protected:
-	double price;
-	int amount;
+	double price;   //Price of Wood part per unit
+	int amount;		//Amount of units needed
+	int available; //amount of units avaiable
 
 public:
-	Wood();
-	Wood(double, int);
-	//accessors and mutators
-	void setPrice(double p) { price = p; }
-	void setAmount(int a) { amount = a; }
-	double getPrice() { return price; }
-	int getAmount() { return amount; }
+	//constructors
+	Wood();		//default contructor 
+	Wood(double, int, int);  //constructor (price, amount, available)
+
+	//mutators
+	void setPrice(double price) { this->price = price; }
+	void setAmount(int amount) { this->amount = amount; }
+	void setAvaiable(int available) { this->available = available; }
+
+	//accessors
+	double getPrice() const{ return this->price; } 
+	int getAmount() const{ return this->amount; }
 
 	//additional functions
-	double totalPrice() { return price * amount; }
+	double totalPrice() { return price * amount; }		//this function calculates the total price for the amount needed.
+	
+
 };
 
 #endif

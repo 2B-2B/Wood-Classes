@@ -1,2 +1,1 @@
-﻿  Main.cpp
-  1B c++ Summative.vcxproj -> C:\Users\eddys\source\repos\1B c++ Summative\Debug\1B c++ Summative.exe
+﻿cl : command line error D8016: '/ZI' and '/clr' command-line options are incompatible

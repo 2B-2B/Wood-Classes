@@ -1,11 +1,16 @@
 #include "Wood.h"
 
+/*
+contructor and function specification for Dimentional
+*/
+
 Wood::Wood() {
-	price = 0;
-	amount = 0;
+	this->price = 0;
+	this->amount = 0;
 }
 
-Wood::Wood(double p, int a) {
-	price = p;
-	amount = a;
+Wood::Wood(double price, int amount, int available) {
+	this->price = price;
+	this->amount = amount;
+	this->available = available;
 }

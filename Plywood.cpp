@@ -1,22 +1,32 @@
 #include "Plywood.h"
 
+/*
+contructor and function specification for Dimentional
+*/
+
 Plywood::Plywood() {
-	length = width = thick = 0;
-	volume = type = "";
+	this->length = this->width = this->thick = 0;
+	this->volume =  "";
 }
 
-Plywood::Plywood(double l, double w, double t, std::string v, double p, int a) : Wood(p, a) {
-	length = l;
-	width = w;
-	thick = t;
-	volume = v;
+Plywood::Plywood(double length, double width, double thick, std::string volume, double price, int amount, int available) : Wood(price, amount, available) {
+	this->length = length;
+	this->width = width;
+	this->thick = thick;
+	this->volume = volume;
+	this->available = available;
 }
 
 std::string Plywood::calculateVolume() {
 	volume = std::to_string(length * width * thick);
-	return volume;
+	return this->volume;
 }
 
 std::string Plywood::dimentionCombination() {
 	return std::to_string(length) + "X" + std::to_string(width) + " - " + std::to_string(thick) + "'";
+}
+
+System::String^ Plywood::getDimentionSS() {
+	System::String^ ss = gcnew System::String(dimentionCombination().c_str());
+	return ss;
 }

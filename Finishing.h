@@ -5,23 +5,35 @@
 #include <string>
 #include <iostream>
 
+/*
+This is a child class of "Wood" 
+Finishing is a type of wood offered in our LumberYard
+*/
+
 class Finishing :public Wood
 {
 private:
+	//variable deceleration
 	double length,height;
 	std::string mouldType, material;
-public:
-	Finishing();
-	Finishing(double, double, std::string, std::string, double, int);
 
-	//accessors and mutators
-	void setLength(double l) { length = l; }
-	void setThick(double h) { height = h; }
-	double getLength() { return length; }
-	double getThick() { return height; }
+public:
+	//contructor
+	Finishing();	//default constructor
+	Finishing(double, double, std::string, std::string, double, int, int); //contructor (lenght, height, material, mouldType, price, amount, available)
+
+	//mutators
+	void setLength(double length) { this->length = length; }
+	void setThick(double height) { this->height = height; }
+	
+	//accessors
+	double getLength() const{ return this->length; }
+	double getThick() const{ return this->height; }
 
 	//additional functions
-	std::string dimentionCombination();
+	std::string dimentionCombination();	//this function combines all dimentions and outputs it as a string
+	System::String^ getDimentionSS();
+
 };
 
 #endif
