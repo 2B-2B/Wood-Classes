@@ -19,6 +19,7 @@ public:
 	//constructors
 	Wood();		//default contructor 
 	Wood(double, int, int);  //constructor (price, amount, available)
+	~Wood() {}
 
 	//mutators
 	void setPrice(double price) { this->price = price; }
@@ -35,6 +36,7 @@ public:
 	System::String^ getDimentionSS();
 	System::String^ getPriceSS();
 	System::String^ getAmountSS();
+
 
 };
 

@@ -17,10 +17,13 @@ private:
 	double length,height;
 	std::string mouldType, material;
 
+
 public:
 	//contructor
 	Finishing();	//default constructor
 	Finishing(double, double, std::string, std::string, double, int, int); //contructor (lenght, height, material, mouldType, price, amount, available)
+	Finishing(const Finishing&);
+	~Finishing() {}
 
 	//mutators
 	void setLength(double length) { this->length = length; }

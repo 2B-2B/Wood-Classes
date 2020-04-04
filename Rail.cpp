@@ -18,6 +18,16 @@ Rail::Rail(double length, double height, std::string material, std::string type,
 }
 
 
+Rail::Rail(const Rail& obj) {
+	this->length = obj.length;
+	this->height = obj.height;
+	this->type = obj.type;
+	this->material = obj.material;
+	this->price = obj.price;
+	this->amount = obj.amount;
+	this->available = obj.available;
+}
+
 std::string Rail::dimentionCombination() {
 	return std::to_string(length) + "'' X " + std::to_string(height) + " '' " + type + " " + material;
 }

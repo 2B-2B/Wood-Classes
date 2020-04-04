@@ -20,7 +20,8 @@ public:
 	//contructor
 	Dimentional();	//default contructor
 	Dimentional(double, double, double, std::string, double, int, int); //contructor (length, width, height, volume, price, amount, available)
-	
+	~Dimentional() {}
+
 	//mutators
 	void setLength(double l) { length = l; }
 	void setWidth(double w) { width = 2; }

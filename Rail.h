@@ -22,6 +22,8 @@ public:
 	//contructor 
 	Rail();		//default contructor
 	Rail(double, double, std::string, std::string, double, int, int);	//contructor (length, height, material, type, price, amount, available)
+	Rail(const Rail&);
+	~Rail() {}
 
 	//mutators
 	void setLength(double length) { this->length = length; }

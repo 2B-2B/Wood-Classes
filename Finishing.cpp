@@ -17,6 +17,17 @@ Finishing::Finishing(double length, double height, std::string material, std::st
 	this->available = available;
 }
 
+Finishing::Finishing(const Finishing& obj) {
+	this->length = obj.length;
+	this->material = obj.material;
+	this->mouldType = obj.mouldType;
+	this->material = obj.material;
+	this->price = obj.price;
+	this->amount = obj.amount;
+	this->available = obj.available;
+}
+
+
 //combination string function
 std::string Finishing::dimentionCombination() {
 	return std::to_string(length) + "X"+ std::to_string(height) + mouldType + " " + material;

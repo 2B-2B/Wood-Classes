@@ -17,6 +17,16 @@ Plywood::Plywood(double length, double width, double thick, std::string volume, 
 	this->available = available;
 }
 
+Plywood::Plywood(const Plywood& obj) {
+	this->length = obj.length;
+	this->width = obj.width;
+	this->thick = obj.thick;
+	this->volume = obj.volume;
+	this->price = obj.price;
+	this->amount = obj.amount;
+	this->available = obj.available;
+}
+
 std::string Plywood::calculateVolume() {
 	volume = std::to_string(length * width * thick);
 	return this->volume;

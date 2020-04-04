@@ -21,6 +21,8 @@ public:
 	//contructor
 	Plywood();	//default constructor
 	Plywood(double, double, double, std::string, double, int, int); //constructor (length, width, thick,  volume, price, amount, avaiable)
+	Plywood(const Plywood&);
+	~Plywood() {}
 
 	//mutators
 	void setLength(double length) { this->length = length; }
